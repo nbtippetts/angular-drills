@@ -1,13 +1,18 @@
 angular.module('apiApp').service('myService', function($http){
 
-      this.getSmurf = function(){
-        return pokemon_entries;
+  this.getData = function(){
+    return data;
+  }
+
+
+
+        this.getPokemon = function(){
+          return $http({
+            method: "GET",
+            url: "http://pokeapi.co/api/v2/pokedex/2/"
+          })
       }
 
-      this.getSmurf = function(){
-        return $http({
-          method: "GET",
-          url: "http://pokeapi.co/api/v2/pokedex/2/"
-        })
-    }
+
+
 })

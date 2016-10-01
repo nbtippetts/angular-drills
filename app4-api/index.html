@@ -1,8 +1,19 @@
 <html ng-app="apiApp">
 	<body ng-controller="mainCtrl">
-          <div ng-repeat="user in users">
+
+		<Div><h1>The Pokedex</h1></div>
+		<br/>
+    <input type="text" placeholder="find pokemon" ng-model="pokemonSpecies">
+		<button ng-click="getPokemonByName(pokemonSpecies)">Find Pokemon by name</button>
+		<hr/>
+		<input type="text" placeholder="find pokemon" ng-model="entryNumber">
+		<button ng-click="getPokemonByEntryNumber(entryNumber)">Find Pokemon by index</button>
+		<button ng-click="resetPokemon()">reset</button>
+          <div ng-repeat="pokemon in displayPokemon">
 						 <ul>
-						    <li>{{user}}</li>
+							 <li><h2>Region: "{{location.name}}"</h2></li>
+						    <li><h3>pokemon: "{{pokemon.pokemon_species.name}}"</h3></li>
+								<li>Index: "#{{pokemon.entry_number}}"</li>
 					   </ul>
 					</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
