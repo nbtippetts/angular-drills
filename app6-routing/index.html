@@ -1,9 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Poke Pokedex</title>
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/details.css">
+	<link rel="stylesheet" href="style/home.css">
+	<link rel="stylesheet" href="style/signUp.css">
+</head>
 	<body>
-		<h1>app6 - routing</h1>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
+
+      <section class="main-container">
+				 <ul>
+					 <li>Pokemon</li>
+				    <li><a ui-sref="home">home</a></li>
+				    <li><a ui-sref="signUp">Sign up</a></li>
+			    	<li><a ui-sref="details">details</a></li>
+				</ul>
+      </section>
+
+			<ui-view></ui-view>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+		<script src="./js/app.js"></script>
+		<script src="./js/controllers/detailsCtrl.js"></script>
+		<script src="./js/controllers/homeCtrl.js"></script>
+		<script src="./js/controllers/signUpCtrl.js"></script>
+		<script src="./js/service.js"></script>
 	</body>
 </html>
