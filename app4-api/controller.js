@@ -3,7 +3,7 @@ angular.module('apiApp').controller('mainCtrl', function($scope, pokemonService)
 
 
     $scope.getPokemon = function(){
-      myService.getPokemon().then(function(response){
+      pokemonService.getPokemon().then(function(response){
         console.log(response)
         $scope.location = response.data;
         $scope.pokemon = response.data.pokemon_entries;
