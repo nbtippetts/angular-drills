@@ -1,4 +1,4 @@
-angular.module('apiApp').service('myService', function($http){
+angular.module('apiApp').service('pokemonService', function($http){
 
   this.getData = function(){
     return data;

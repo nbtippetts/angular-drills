@@ -1,4 +1,4 @@
-angular.module('apiApp').controller('mainCtrl', function($scope, myService){
+angular.module('apiApp').controller('mainCtrl', function($scope, pokemonService){
 
 
 
